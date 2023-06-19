@@ -23,7 +23,7 @@ export default defineConfig({
     }),
     VitePluginRadar({
       analytics: {
-        id: 'G-FZ81SB9YSS'
+        id: 'G-6E1HTBVV6V'
       }
     }),
     VitePWA({
