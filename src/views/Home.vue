@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row class="text-center" >
       <v-col cols="12">
         <h1>{{ currentText }}</h1>
         <h1>{{ currentTime }}</h1>
@@ -19,7 +19,8 @@ import { useListStore } from '@/store/list'
 import { storeToRefs } from 'pinia'
 import { useSettingsStore } from '@/store/settings'
 import { ref, computed } from 'vue'
-import { useWebNotification } from '@vueuse/core'
+import { useArrayUnique, useWebNotification } from '@vueuse/core'
+
 
 const list = useListStore()
 const { items, currentItem, timeleft } = storeToRefs(list)
@@ -96,3 +97,10 @@ const currentTime = computed(() => {
   return m + ':' + s
 })
 </script>
+
+
+<!-- <style>
+.container{
+  background: #FFF;
+}
+</style> -->
